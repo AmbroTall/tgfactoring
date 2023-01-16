@@ -11,7 +11,6 @@ class Loans(models.Model):
 	credit_score = models.CharField(max_length=50)
 	period_in_business = models.CharField(max_length=50)
 	name = models.CharField(max_length=50)
-	phone = models.CharField(max_length=50)
 	bank_statement1 = models.FileField(upload_to='documents', max_length=500)
 	bank_statement2 = models.FileField(upload_to='documents', max_length=500)
 	bank_statement3 = models.FileField(upload_to='documents', max_length=500)
@@ -60,4 +59,4 @@ class Loans(models.Model):
 		return self.name
 
 	class Meta:
-		verbose_name_plural = "Business_info"
+		verbose_name_plural = "Loan"
