@@ -3,7 +3,6 @@ from django.db import models
 
 # Create your models here.
 class Loans(models.Model):
-# class BusinessInfo(models.Model):
 	loan_amount = models.CharField(max_length=50)
 	period_to_receive_funds = models.CharField(max_length=50)
 	what_for= models.CharField(max_length=50, blank=True)
@@ -20,7 +19,7 @@ class Loans(models.Model):
 	business_legal_name = models.CharField(max_length=255)
 	business_dba_name = models.CharField(max_length=255)
 	industry_type = models.CharField(max_length=255)
-	gross_annual_sales = models.DecimalField(max_digits=10, decimal_places=2)
+	gross_annual_sales = models.FloatField()
 	use_of_proceeds = models.CharField(max_length=255)
 	federal_tax_id = models.CharField(max_length=255)
 	state_of_incorporation = models.CharField(max_length=255)
@@ -38,7 +37,7 @@ class Loans(models.Model):
 
 	owner_name = models.CharField(max_length=255)
 	title = models.CharField(max_length=255)
-	ownership_percentage = models.DecimalField(max_digits=10, decimal_places=2)
+	ownership_percentage = models.FloatField()
 	preferred_contact = models.CharField(max_length=255)
 	ss = models.CharField(max_length=255)
 	dob = models.DateField(max_length=255)
