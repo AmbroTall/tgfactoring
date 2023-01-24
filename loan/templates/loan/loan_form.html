@@ -456,31 +456,31 @@
 	<div class="step">
 		<div class="mb-3">
 			<label class="form-label" for="ein_document">EIN Document</label>
-			<input class="form-control form-control-sm" id="ein_document" name="ein_document"
+			<input id="ein_document" name="ein_document"
 			       onchange="ein_document()" type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="articles_of_incorporation">Articles of Incorporation
 				</label>
-			<input class="form-control form-control-sm" id="articles_of_incorporation" name="articles_of_incorporation"
+			<input  id="articles_of_incorporation" name="articles_of_incorporation"
 			       onchange="articles_of_incorporation()" type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="operating_agreement">Operating Agreement
 				</label>
-			<input class="form-control form-control-sm" id="operating_agreement" name="operating_agreement"
+			<input id="operating_agreement" name="operating_agreement"
 			       onchange="operating_agreement()" type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="business_license">Business License
 				</label>
-			<input class="form-control form-control-sm" id="business_license" name="business_license"
+			<input id="business_license" name="business_license"
 			       onchange="business_license()" type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="insurance_document">Insurance Document
 				</label>
-			<input class="form-control form-control-sm" id="insurance_document" name="insurance_document"
+			<input id="insurance_document" name="insurance_document"
 			       onchange="insurance_document()" type="file">
 		</div>
 		<div class="mb-3">
@@ -591,7 +591,7 @@
           // This function deals with validation of the form fields
           var x, y, i, valid = true;
           x = document.getElementsByClassName("step");
-          y = x[currentTab].getElementsByTagName("input");
+          y = x[currentTab].getElementsByClassName("form-control");
           // A loop that checks every input field in the current tab:
           for (i = 0; i < y.length; i++) {
             // If a field is empty...
