@@ -83,12 +83,8 @@ WSGI_APPLICATION = 'loan_credit.wsgi.application'
 
 DATABASES = {
 	# 'default': {
-	# 	'ENGINE': 'django.db.backends.mysql',
-	# 	'NAME': 'jbetadev_loans',
-	# 	'USER': 'jbetadev_jbetadev',
-	# 	'PASSWORD': 'tech2022@@',
-	# 	'HOST': '168.119.4.62',
-	# 	'PORT': '3306',
+	# 	'ENGINE': 'django.db.backends.sqlite3',
+	# 	'NAME': BASE_DIR / 'db.sqlite3',
 	# }
 	'default': {
 		'ENGINE': 'django.db.backends.mysql',

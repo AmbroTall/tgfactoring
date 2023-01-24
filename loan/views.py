@@ -81,11 +81,11 @@ def loans_form(request):
         owner_city = request.POST["owner_city"]
         owner_state = request.POST["owner_state"]
         owner_zip = request.POST["owner_zip"]
-        ein_document = request.FILES['ein_document']
-        articles_of_incorporation = request.FILES['articles_of_incorporation']
-        operating_agreement = request.FILES['operating_agreement']
-        business_license = request.FILES['business_license']
-        insurance_document = request.FILES['insurance_document']
+        ein_document = request.FILES.get('ein_document', None)
+        articles_of_incorporation = request.FILES.get('articles_of_incorporation', None)
+        operating_agreement = request.FILES.get('operating_agreement', None)
+        business_license = request.FILES.get('business_license', None)
+        insurance_document = request.FILES.get('insurance_document', None)
         name = f"{first} {last}"
 
 
