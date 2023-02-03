@@ -14,11 +14,17 @@
     margin: auto;
     padding: 3rem 0;
     }
+
+    label{
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 5px;
+    }
 </style>
 
 <form method="post" enctype="multipart/form-data" class="">
   {% csrf_token %}
   {{ form|crispy }}
-  <input class="btn btn-primary mt-2"  type="submit" value="Register">
-<p><small>Already have an account?<a href="{% url 'loan:login' %}">Sign In</a></small></p></form>
+  <input class="btn btn-primary mt-2"  type="submit" value="Edit Credit">
+</form>
 {% endblock%}

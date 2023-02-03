@@ -1,8 +1,9 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Loans(models.Model):
+	user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 	loan_amount = models.CharField(max_length=50)
 	period_to_receive_funds = models.CharField(max_length=50)
 	what_for= models.CharField(max_length=50, blank=True)
@@ -38,6 +39,19 @@ class Loans(models.Model):
 	owner_name = models.CharField(max_length=255)
 	title = models.CharField(max_length=255)
 	ownership_percentage = models.FloatField()
+
+	partner_1 = models.CharField(max_length=255,blank=True, null=True)
+	partner_2 = models.CharField(max_length=255,blank=True, null=True)
+	partner_3 = models.CharField(max_length=255,blank=True, null=True)
+	partner_4 = models.CharField(max_length=255,blank=True, null=True)
+	partner_5 = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_percantage = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_percantage = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_percantage = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_percantage = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_percantage = models.CharField(max_length=255,blank=True, null=True)
+
 	preferred_contact = models.CharField(max_length=255)
 	ss = models.CharField(max_length=255)
 	dob = models.DateField(max_length=255)
