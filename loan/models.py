@@ -46,6 +46,48 @@ class Loans(models.Model):
 	partner_4 = models.CharField(max_length=255,blank=True, null=True)
 	partner_5 = models.CharField(max_length=255,blank=True, null=True)
 
+	partner_1_city = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_city = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_city = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_city = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_city = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_state = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_state = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_state = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_state = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_state = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_zip = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_zip = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_zip = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_zip = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_zip = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_address = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_address = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_address = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_address = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_address = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_ss = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_ss = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_ss = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_ss = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_ss = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_email = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_email = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_email = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_email = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_email = models.CharField(max_length=255,blank=True, null=True)
+
+	partner_1_phone = models.CharField(max_length=255,blank=True, null=True)
+	partner_2_phone = models.CharField(max_length=255,blank=True, null=True)
+	partner_3_phone = models.CharField(max_length=255,blank=True, null=True)
+	partner_4_phone = models.CharField(max_length=255,blank=True, null=True)
+	partner_5_phone = models.CharField(max_length=255,blank=True, null=True)
+
 	partner_1_percantage = models.CharField(max_length=255,blank=True, null=True)
 	partner_2_percantage = models.CharField(max_length=255,blank=True, null=True)
 	partner_3_percantage = models.CharField(max_length=255,blank=True, null=True)

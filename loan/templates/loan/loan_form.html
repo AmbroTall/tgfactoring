@@ -298,7 +298,7 @@
 			</div>
 			<label for="ownership_percentage">Ownership Percentage
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="ownership_percentage" max="100" min="50"
+			<input class="form-control form-control-sm" id="ownership_percentage" max="100" min="0"
 			       name="ownership_percentage" onkeyup="ownershipPercentage()"
 			       placeholder="" type="number">
 			<p id="warning" style="color: red; font-size: 12px"></p>
@@ -560,14 +560,14 @@
 	</div>
 	<!-- end previous / next buttons -->
 </form>
-
 <script>
+
 	function ownershipPercentage(){
 			var ownership = document.getElementById("ownership_percentage").value
 			var ownership_container = document.getElementById("partnership-info")
 			var warning = document.getElementById("warning")
-			if (ownership > 100 || ownership < 10){
-				warning.innerHTML = "Maximum is 100 and Minimum 10"
+			if (ownership > 100 || ownership < 0){
+				warning.innerHTML = "Maximum is 100 and Minimum 0"
 				ownership_container.style.display = "none"
 			} else if (ownership < 100){
 				warning.innerHTML = ""
@@ -599,8 +599,20 @@
 
 
         for (let i = 1; i <= x; i++) {
+			var container_main = document.createElement("div");
+			container_main.style.display = "flex";
+			container_main.style.flexDirection = "column";
+
+			var container_inputs = document.createElement("div");
+			container_inputs.style.display = "flex";
+			container_inputs.style.margin = "10px";
+			container_inputs.style.flexDirection = "column";
+
+
 	        var container = document.createElement("div");
 			container.style.display = "flex";
+
+
 			var input_name = document.createElement("input");
 			input_name.setAttribute("placeholder", `Partner Name ${i}`);
 			input_name.style.flex = "2";
@@ -613,15 +625,96 @@
 			input_percent.setAttribute("max", "100");
 			input_percent.setAttribute("min", "1");
 			input_percent.setAttribute("name", `partner${i}_percent`);
-			input_percent.setAttribute("placeholder", "%ge");
+			input_percent.setAttribute("placeholder", "%");
 			input_percent.style.flex = "1";
 			input_percent.style.marginLeft = "5px";
 			input_percent.setAttribute("type", "number");
 
+<!--			Address-->
+			var input_address = document.createElement("input");
+			input_address.setAttribute("class", "form-control form-control-sm");
+			input_address.setAttribute("id", `partner${i}_address`);
+			input_address.setAttribute("name", `partner${i}_address`);
+			input_address.setAttribute("placeholder", `Partner${i}_address`);
+			input_address.style.flex = "1";
+<!--			input_address.style.marginLeft = "5px";-->
+			input_address.setAttribute("type", "text");
+
+			var input_city = document.createElement("input");
+			input_city.setAttribute("class", "form-control form-control-sm");
+			input_city.setAttribute("id", `partner${i}_city`);
+			input_city.setAttribute("name", `partner${i}_city`);
+			input_city.setAttribute("placeholder", `Partner${i}_city`);
+			input_city.style.flex = "1";
+<!--			input_city.style.marginLeft = "5px";-->
+			input_city.setAttribute("type", "text");
+
+
+			var input_state = document.createElement("input");
+			input_state.setAttribute("class", "form-control form-control-sm");
+			input_state.setAttribute("id", `partner${i}_state`);
+			input_state.setAttribute("name", `partner${i}_state`);
+			input_state.setAttribute("placeholder", `Partner${i}_state`);
+			input_state.style.flex = "1";
+<!--			input_state.style.marginLeft = "5px";-->
+			input_state.setAttribute("type", "text");
+
+			var input_zip = document.createElement("input");
+			input_zip.setAttribute("class", "form-control form-control-sm");
+			input_zip.setAttribute("id", `partner${i}_zip`);
+			input_zip.setAttribute("name", `partner${i}_zip`);
+			input_zip.setAttribute("placeholder", `Partner${i}_zip`);
+			input_zip.style.flex = "1";
+<!--			input_zip.style.marginLeft = "5px";-->
+			input_zip.setAttribute("type", "text");
+
+			var input_ss = document.createElement("input");
+			input_ss.setAttribute("class", "form-control form-control-sm");
+			input_ss.setAttribute("id", `partner${i}_ss`);
+			input_ss.setAttribute("name", `partner${i}_ss`);
+			input_ss.setAttribute("placeholder", `Partner${i}_SS`);
+			input_ss.style.flex = "1";
+<!--			input_ss.style.marginLeft = "5px";-->
+			input_ss.setAttribute("type", "text");
+
+			var input_email = document.createElement("input");
+			input_email.setAttribute("class", "form-control form-control-sm");
+			input_email.setAttribute("id", `partner${i}_email`);
+			input_email.setAttribute("name", `partner${i}_email`);
+			input_email.setAttribute("placeholder", `Partner${i}_email`);
+			input_email.style.flex = "1";
+<!--			input_email.style.marginLeft = "5px";-->
+			input_email.setAttribute("type", "email");
+
+			var input_phone = document.createElement("input");
+			input_phone.setAttribute("class", "form-control form-control-sm");
+			input_phone.setAttribute("id", `partner${i}_phone`);
+			input_phone.setAttribute("name", `partner${i}_phone`);
+			input_phone.setAttribute("placeholder", `Partner${i}_phone`);
+			input_phone.style.flex = "1";
+<!--			input_phone.style.marginLeft = "5px";-->
+			input_phone.setAttribute("type", "text");
+
+
+
+
+            container_main.appendChild(container);
+            container_main.appendChild(container_inputs);
             container.appendChild(input_name);
 			container.appendChild(input_percent);
 
-			document.getElementById("horizontal").appendChild(container)
+			container_inputs.appendChild(input_phone);
+			container_inputs.appendChild(input_email);
+
+			container_inputs.appendChild(input_address);
+			container_inputs.appendChild(input_city);
+			container_inputs.appendChild(input_state);
+			container_inputs.appendChild(input_zip);
+			container_inputs.appendChild(input_ss);
+
+			container_inputs.appendChild(input_ss);
+
+			document.getElementById("horizontal").appendChild(container_main)
     }
     }
 
