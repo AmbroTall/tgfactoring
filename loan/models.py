@@ -88,6 +88,12 @@ class Loans(models.Model):
 	partner_4_phone = models.CharField(max_length=255,blank=True, null=True)
 	partner_5_phone = models.CharField(max_length=255,blank=True, null=True)
 
+	partner_1_DOB = models.DateField(max_length=255,blank=True, null=True)
+	partner_2_DOB = models.DateField(max_length=255,blank=True, null=True)
+	partner_3_DOB = models.DateField(max_length=255,blank=True, null=True)
+	partner_4_DOB = models.DateField(max_length=255,blank=True, null=True)
+	partner_5_DOB = models.DateField(max_length=255,blank=True, null=True)
+
 	partner_1_percantage = models.CharField(max_length=255,blank=True, null=True)
 	partner_2_percantage = models.CharField(max_length=255,blank=True, null=True)
 	partner_3_percantage = models.CharField(max_length=255,blank=True, null=True)

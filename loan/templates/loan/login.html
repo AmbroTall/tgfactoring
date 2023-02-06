@@ -14,12 +14,32 @@
     margin: auto;
     padding: 3rem 0;
     }
-</style>
-<form method="post" enctype="multipart/form-data" class="">
-  {% csrf_token %}
-  {{ form|crispy }}
-  <input class="btn btn-primary mt-2"  type="submit" value="Login">
-    <p><small>Don't have an account?<a href="{% url 'loan:register' %}">Sign Up</a></small></p>
-</form>
 
+</style>
+
+
+<form class="" enctype="multipart/form-data" method="post">
+	<div style="display:flex; justify-content: center; align-items:center">
+		<p>Please Create an account to start application <a href="{% url 'loan:register' %}" id="msg"></a></p>
+
+	</div>
+	{% csrf_token %}
+	{{ form|crispy }}
+	<input class="btn btn-primary mt-2" type="submit" value="Login">
+	<p><small>Don't have an account?<a href="{% url 'loan:register' %}">Sign Up</a></small></p>
+</form>
+<script>
+	function showText(target, message, index, interval) {
+	  if (index < message.length) {
+	    document.getElementById(target).append(message[index++]);
+	    setTimeout(function () {
+	      showText(target, message, index, interval);
+	    }, interval);
+	  }
+	}
+
+	// Use the function like this:
+	showText("msg", "Sign Up.", 0, 150);
+
+</script>
 {% endblock%}

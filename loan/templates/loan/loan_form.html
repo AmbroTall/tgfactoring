@@ -608,6 +608,11 @@
 			container_inputs.style.margin = "10px";
 			container_inputs.style.flexDirection = "column";
 
+			var container_label = document.createElement("div");
+			container_label.style.display = "flex";
+			container_label.style.margin = "5px";
+			container_label.style.flexDirection = "column";
+
 
 	        var container = document.createElement("div");
 			container.style.display = "flex";
@@ -695,8 +700,18 @@
 <!--			input_phone.style.marginLeft = "5px";-->
 			input_phone.setAttribute("type", "text");
 
+			var input_dob = document.createElement("input");
+			input_dob.setAttribute("class", "form-control form-control-sm");
+			input_dob.setAttribute("id", `partner${i}_dob`);
+			input_dob.setAttribute("name", `partner${i}_dob`);
+			input_dob.setAttribute("placeholder", `Partner${i}_DOB`);
+			input_dob.style.flex = "1";
+<!--			input_dob.style.marginLeft = "5px";-->
+			input_dob.setAttribute("type", "date");
 
-
+			var label = document.createElement("h6");
+			label.innerHTML = `partner${i}_dob`
+<!--			label.setAttribute("for", );-->
 
             container_main.appendChild(container);
             container_main.appendChild(container_inputs);
@@ -704,6 +719,9 @@
 			container.appendChild(input_percent);
 
 			container_inputs.appendChild(input_phone);
+			container_inputs.appendChild(container_label);
+			container_label.appendChild(label);
+			container_label.appendChild(input_dob);
 			container_inputs.appendChild(input_email);
 
 			container_inputs.appendChild(input_address);
