@@ -148,6 +148,7 @@
         }random3{
          flex:1;
         }
+
 </style>
 
 
@@ -188,7 +189,7 @@
 			<label for="loan_amount">How much does your business need?
 				<span class="text-danger">*</span></label>
 			<select aria-label="Default select example" class="form-select" id="loan_amount" name="loan_amount"
-			        onchange="myLoanAmount()">
+			>
 				<option selected value="$5,000-$15,000">$5,000-$15,000</option>
 				<option value="$15,000-$30,000">$15,000-$30,000</option>
 				<option value="$30,000-$60,000">$30,000-$60,000</option>
@@ -203,7 +204,7 @@
 			<label for="period_to_receive_funds">About how long do you need funds?
 				<span class="text-danger">*</span></label>
 			<select aria-label="Default select example" class="form-select" id="period_to_receive_funds" name="period_to_receive_funds"
-			        onchange="period()">
+			>
 				<option selected value="3 months">3 months</option>
 				<option value="6 months">6 months</option>
 				<option value="12 months">12 months</option>
@@ -214,7 +215,7 @@
 		</div>
 		<div class="mb-3 mt-4">
 			<label for="what_for">What do you need the funds for?</label>
-			<select aria-label="Default select example" class="form-select" id="what_for" name="what_for" onchange="what_for()">
+			<select aria-label="Default select example" class="form-select" id="what_for" name="what_for">
 				<option selected value="Buy equipment">Buy Equipment</option>
 				<option value="Buy equipment">Buy Inventory</option>
 				<option value="Cover Payroll">Cover Payroll</option>
@@ -232,7 +233,7 @@
 		<div class="mb-3 mt-4">
 			<label for="monthly_revenue">What is your current monthly revenue?
 				<span class="text-danger">*</span></label>
-			<select aria-label="Default select example" class="form-select" id="monthly_revenue" name="monthly_revenue" onchange="monthly_revenue()">
+			<select aria-label="Default select example" class="form-select" id="monthly_revenue" name="monthly_revenue">
 				<option selected value="$5,000-$15,000">$5,000-$15,000</option>
 				<option value="$15,000-$30,000">$15,000-$30,000</option>
 				<option value="$30,000-$60,000">$30,000-$60,000</option>
@@ -246,7 +247,7 @@
 		<div class="mb-3 mt-4">
 			<label for="credit_score">What is your credit score?
 				<span class="text-danger">*</span></label>
-			<select aria-label="Default select example" class="form-select" id="credit_score" name="credit_score" onchange="credit_score()">
+			<select aria-label="Default select example" class="form-select" id="credit_score" name="credit_score">
 				<option selected value="Above 750">Above 750</option>
 				<option value="720-750">720-750</option>
 				<option value="670-720">670-720</option>
@@ -260,7 +261,7 @@
 		<div class="mb-3 mt-4">
 			<label for="period_in_business">How long have you been in business?
 				<span class="text-danger">*</span></label>
-			<select aria-label="Default select example" class="form-select" id="period_in_business" name="period_in_business" onchange="period_in_business()">
+			<select aria-label="Default select example" class="form-select" id="period_in_business" name="period_in_business">
 				<option selected value="Less than 6 months">Less than 6 months</option>
 				<option value="6-12 months">6-12 months</option>
 				<option value="1 year">1 year</option>
@@ -276,7 +277,7 @@
 		<div class="mb-3 mt-4">
 			<label for="owner_name">Owner/Officer
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="owner_name" name="owner_name" onchange="owner_name()"
+			<input class="form-control form-control-sm" id="owner_name" name="owner_name"
 			       placeholder="" type="text">
 		</div>
 
@@ -284,7 +285,7 @@
 			<div class="mb-3 mt-4">
 				<label for="title">Title
 					<span class="text-danger">*</span></label>
-				<input class="form-control form-control-sm" id="title" name="title" onchange="title()" placeholder="" type="text">
+				<input class="form-control form-control-sm" id="title" name="title" placeholder="" type="text">
 			</div>
 			<label for="ownership_percentage">Ownership Percentage
 				<span class="text-danger">*</span></label>
@@ -297,7 +298,7 @@
 		<div class="partnership-info" id="partnership-info">
 			<div class="mb-3 mt-4">
 				<div class="mb-3 mt-4 d-flex align-items-center justify-content-center ">
-					<input class="form-control form-control-sm" id="no-partners" max="5" min="1"
+					<input class="" id="no-partners" max="5" min="1"
 					       name="no_partners" onkeyup="noPartners()" placeholder="Number of ownership partners"
 					       style="flex:3"
 					       type="number">
@@ -305,19 +306,19 @@
 					   style="font-size: 2em; color: teal;flex:1; margin-left: 5px; cursor: pointer"></i>
 					<p id="pWarning" style="color: red; font-size: 12px"></p>
 				</div>
-				<label >Partner Details
+				<label>Partner Details
 					<span class="text-danger">*</span></label>
 
-				<div id="horizontal" >
+				<div id="horizontal">
 
 				</div>
-<!--								<div style="display: flex">-->
-<!--									<input placeholder="Partner Name 1" style="flex:2" type="text">-->
-<!--									<input class="form-control form-control-sm" id="partner" max="100" min="50"-->
-<!--									       onkeyup="ownershipPercentage()"-->
-<!--									       placeholder="%ge" placeholder=""-->
-<!--									       style="flex:1;margin-left: 5px" type="number">-->
-<!--								</div>-->
+				<!--								<div style="display: flex">-->
+				<!--									<input placeholder="Partner Name 1" style="flex:2" type="text">-->
+				<!--									<input class="form-control form-control-sm" id="partner" max="100" min="50"-->
+				<!--									       onkeyup="ownershipPercentage()"-->
+				<!--									       placeholder="%ge" placeholder=""-->
+				<!--									       style="flex:1;margin-left: 5px" type="number">-->
+				<!--								</div>-->
 			</div>
 			<p style="color: red; font-size: 12px"></p>
 		</div>
@@ -325,48 +326,48 @@
 		<div class="mb-3 mt-4">
 			<label for="name">Name
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="name" name="first" onchange="first()" placeholder="First"
+			<input class="form-control form-control-sm" id="name" name="first" placeholder="First"
 			       type="text">
-			<input class="form-control form-control-sm" class="mt-2" id="last" name="last" onchange="last()" placeholder="Last"
+			<input class="form-control form-control-sm" class="mt-2" id="last" name="last" placeholder="Last"
 			       type="text">
 		</div>
 
 		<div class="mb-3">
 			<label for="preferred_contact">Preferred Contact
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="preferred_contact" name="preferred_contact" onchange="preferred_contact()" placeholder=""
+			<input class="form-control form-control-sm" id="preferred_contact" name="preferred_contact" placeholder=""
 			       type="text">
 		</div>
 
 		<div class="mb-3">
 			<label for="ss">SS
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="ss" name="ss" onchange="ss()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="ss" name="ss" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="dob">DOB
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="dob" name="dob" onchange="dob()" placeholder="" type="date">
+			<input class="form-control form-control-sm" id="dob" name="dob" placeholder="" type="date">
 		</div>
 		<div class="mb-3">
 			<label for="owner_address">Address
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="owner_address" name="owner_address" onchange="owner_address()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="owner_address" name="owner_address" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="owner_city">City
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="owner_city" name="owner_city" onchange="owner_city()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="owner_city" name="owner_city" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="owner_state">State
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="owner_state" name="owner_state" onchange="owner_state()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="owner_state" name="owner_state" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="owner_zip">Zip
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="owner_zip" name="owner_zip" onchange="owner_zip()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="owner_zip" name="owner_zip" placeholder="" type="text">
 		</div>
 	</div>
 
@@ -375,67 +376,67 @@
 		<div class="mb-3 mt-4">
 			<label for="business_legal_name">Business Legal Name
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_legal_name" name="business_legal_name" onchange="business_legal_name()"
+			<input class="form-control form-control-sm" id="business_legal_name" name="business_legal_name"
 			       type="text">
 		</div>
 		<div class="mb-3 mt-4">
 			<label for="business_dba_name">Business DBA Name
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_dba_name" name="business_dba_name" onchange="business_dba_name()" placeholder=""
+			<input class="form-control form-control-sm" id="business_dba_name" name="business_dba_name" placeholder=""
 			       type="text">
 		</div>
 		<div class="mb-3">
 			<label for="industry_type">Industry Type
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="industry_type" name="industry_type" onchange="industry_type()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="industry_type" name="industry_type" placeholder="" type="text">
 		</div>
 
 		<div class="mb-3">
 			<label for="gross_annual_sales">Gross Annual Sales
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="gross_annual_sales" name="gross_annual_sales" onchange="gross_annual_sales()" placeholder=""
+			<input class="form-control form-control-sm" id="gross_annual_sales" name="gross_annual_sales" placeholder=""
 			       type="number">
 		</div>
 
 		<div class="mb-3">
 			<label for="use_of_proceeds">Use of Proceeds
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="use_of_proceeds" name="use_of_proceeds" onchange="use_of_proceeds()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="use_of_proceeds" name="use_of_proceeds" placeholder="" type="text">
 		</div>
 
 		<div class="mb-3">
 			<label for="federal_tax_id">Federal Tax ID
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="federal_tax_id" name="federal_tax_id" onchange="federal_tax_id()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="federal_tax_id" name="federal_tax_id" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="state_of_incorporation">State of Incorporation
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="state_of_incorporation" name="state_of_incorporation" onchange="state_of_incorporation()"
+			<input class="form-control form-control-sm" id="state_of_incorporation" name="state_of_incorporation"
 			       placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="type_of_business_entity">Type of Business Entity
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="type_of_business_entity" name="type_of_business_entity" onchange="type_of_business_entity()"
+			<input class="form-control form-control-sm" id="type_of_business_entity" name="type_of_business_entity"
 			       placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="business_start_date">Business Start Date under current ownership
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_start_date" name="business_start_date" onchange="business_start_date()"
+			<input class="form-control form-control-sm" id="business_start_date" name="business_start_date"
 			       placeholder="" type="date">
 		</div>
 		<div class="mb-3">
 			<label for="merchant_email">Merchant Email
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="merchant_email" name="merchant_email" onchange="merchant_email()" placeholder="" type="email">
+			<input class="form-control form-control-sm" id="merchant_email" name="merchant_email" placeholder="" type="email">
 		</div>
 
 		<div class="mb-3">
 			<label for="open_cash_advance_or_loans">Do you have any open cash advance or loans?
 				<span class="text-danger">*</span></label>
-			<select aria-label="Default select example" class="form-select" id="open_cash_advance_or_loans" name="open_cash_advance_or_loans" onchange="open_cash_advance_or_loans()">
+			<select aria-label="Default select example" class="form-select" id="open_cash_advance_or_loans" name="open_cash_advance_or_loans">
 				<option selected value="">Choose..</option>
 				<option value="Yes">Yes</option>
 				<option value="No">No</option>
@@ -445,7 +446,7 @@
 		<div class="mb-3">
 			<label for="open_bankruptcies">Do you have any open bankruptcies?
 				<span class="text-danger">*</span></label>
-			<select aria-label="Default select example" class="form-select" id="open_bankruptcies" name="open_bankruptcies" onchange="open_bankruptcies()">
+			<select aria-label="Default select example" class="form-select" id="open_bankruptcies" name="open_bankruptcies">
 				<option selected value="">Choose..</option>
 				<option value="Yes">Yes</option>
 				<option value="No">No</option>
@@ -455,7 +456,7 @@
 		<div class="mb-3">
 			<label for="tax_liens_or_judgements">Do you have any tax liens or judgements?
 				<span class="text-danger">*</span></label>
-			<select aria-label="Default select example" class="form-select" id="tax_liens_or_judgements" name="tax_liens_or_judgements" onchange="tax_liens_or_judgements()">
+			<select aria-label="Default select example" class="form-select" id="tax_liens_or_judgements" name="tax_liens_or_judgements">
 				<option selected value="">Choose..</option>
 				<option value="Yes">Yes</option>
 				<option value="No">No</option>
@@ -465,28 +466,28 @@
 		<div class="mb-3">
 			<label for="business_address">Business Address
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_address" name="business_address" onchange="business_address()" placeholder=""
+			<input class="form-control form-control-sm" id="business_address" name="business_address" placeholder=""
 			       type="email">
 		</div>
 		<div class="mb-3">
 			<label for="business_city">Business City
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_city" name="business_city" onchange="business_city()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="business_city" name="business_city" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="business_state">Business State
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_state" name="business_state" onchange="business_state()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="business_state" name="business_state" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="business_zip">Business Zip
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="business_zip" name="business_zip" onchange="business_zip()" placeholder="" type="text">
+			<input class="form-control form-control-sm" id="business_zip" name="business_zip" placeholder="" type="text">
 		</div>
 		<div class="mb-3">
 			<label for="physical_phone_number">Physical Phone Number
 				<span class="text-danger">*</span></label>
-			<input class="form-control form-control-sm" id="physical_phone_number" name="physical_phone_number" onchange="physical_phone_number()"
+			<input class="form-control form-control-sm" id="physical_phone_number" name="physical_phone_number"
 			       placeholder="" type="text">
 		</div>
 	</div>
@@ -496,51 +497,51 @@
 		<div class="mb-3">
 			<label class="form-label" for="ein_document">EIN Document</label>
 			<input id="ein_document" name="ein_document"
-			       onchange="ein_document()" type="file">
+			       type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="articles_of_incorporation">Articles of Incorporation
 			</label>
 			<input id="articles_of_incorporation" name="articles_of_incorporation"
-			       onchange="articles_of_incorporation()" type="file">
+			       type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="operating_agreement">Operating Agreement
 			</label>
 			<input id="operating_agreement" name="operating_agreement"
-			       onchange="operating_agreement()" type="file">
+			       type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="business_license">Business License
 			</label>
 			<input id="business_license" name="business_license"
-			       onchange="business_license()" type="file">
+			       type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="insurance_document">Insurance Document
 			</label>
 			<input id="insurance_document" name="insurance_document"
-			       onchange="insurance_document()" type="file">
+			       type="file">
 		</div>
 		<div class="mb-3">
 			<label class="form-label" for="formFileSm1">Upload Bank Statement
 				1<span class="text-danger">*</span></label>
 			<input class="form-control form-control-sm" id="formFileSm1" name="bank_statement1"
-			       onchange="bank_statement1()" type="file">
+			       type="file">
 		</div>
 
 		<div class="mb-3">
 			<label class="form-label" for="formFileSm2">Upload Bank Statement
 				2<span class="text-danger">*</span></label>
 			<input class="form-control form-control-sm" id="formFileSm2" name="bank_statement2"
-			       onchange="bank_statement2()" type="file">
+			       type="file">
 		</div>
 
 		<div class="mb-3">
 			<label class="form-label" for="formFileSm3">Upload Bank Statement
 				3<span class="text-danger">*</span></label>
 			<input class="form-control form-control-sm" id="formFileSm3" name="bank_statement3"
-			       onchange="bank_statement3()" type="file">
+			       type="file">
 		</div>
 	</div>
 	<!-- start previous / next buttons -->
@@ -553,6 +554,8 @@
 <script>
 
 	function ownershipPercentage(){
+			var partners = document.getElementById("no-partners")
+
 			var ownership = document.getElementById("ownership_percentage").value
 			var ownership_container = document.getElementById("partnership-info")
 			var warning = document.getElementById("warning")
@@ -563,6 +566,7 @@
 				warning.innerHTML = ""
 				ownership_container.style.display = "block"
 			} else {
+				partners.setAttribute("class", "");
 				warning.innerHTML = ""
 				ownership_container.style.display = "none"
 			}
@@ -831,5 +835,6 @@
           //... and adds the "active" class on the current step:
           x[n].className += " active";
         }
+
 </script>
 {% endblock %}
