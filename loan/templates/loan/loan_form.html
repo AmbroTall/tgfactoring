@@ -560,9 +560,12 @@
 			var ownership_container = document.getElementById("partnership-info")
 			var warning = document.getElementById("warning")
 			if (ownership > 100 || ownership < 0){
+				partners.setAttribute("class", "form-control form-control-sm");
+
 				warning.innerHTML = "Maximum is 100 and Minimum 0"
 				ownership_container.style.display = "none"
 			} else if (ownership < 100){
+				partners.setAttribute("class", "form-control form-control-sm");
 				warning.innerHTML = ""
 				ownership_container.style.display = "block"
 			} else {
