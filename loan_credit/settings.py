@@ -93,7 +93,7 @@ DATABASES = {
 		'NAME': 'memoodrr_application',
 		'USER': 'memoodrr_application',
 		'PASSWORD': 'i?VyTw#4kdkb',
-		'HOST': '168.119.4.62',
+		'HOST': '144.76.112.25',
 		'PORT': '3306',
 	}
 }
